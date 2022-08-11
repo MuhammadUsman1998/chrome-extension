@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { chromeExtension } from "./chromeExtension";
 function App() {
+  const randomNum = Math.floor(
+    Math.random() * Math.floor(chromeExtension.length)
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>{chromeExtension[randomNum].FIELD1}</h1>
+      <h3>{chromeExtension[randomNum].FIELD2}</h3>
     </div>
   );
 }
